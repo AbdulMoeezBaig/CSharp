@@ -9,7 +9,8 @@
 5. Data Types (char, string, int, float, double, decimal, bool ), append at end (0.0012312F) F or f for float, M or m for Decimal
 
 ### Coding Style
-1. Variables should use camel case i.e. thisIsCamelCase  
+1. Variables should use camel case i.e. thisIsCamelCase
+2. Starting with underscore (_VariableName) is for a special purpose
 
 
 ### List of Commands / Methods
