@@ -13,8 +13,10 @@
 9. To add encoded characters in literal strings, use \u escape sequence followed by a 4 digit character code representing the character in UTF-16 such as Console.WriteLine("I have 1000000000000\u20ac");
 10. String concatenation works with just a "+" between the variables / strings
 11. String interpolation --> string message = $" {var1} {var2} ..."; --> more precise
-12. 
-13. 
+12. Both string concatenation and addition use the plus + symbol. This is called overloading an operator, and the compiler infers the proper use based on the data types it's operating on.
+13. Casting is a type of data conversion used with variables such as (float) var1 / (float) var2 which would normally be 12f/5 or 12f/5f or 12/5f, we use cast cz we don't have numbers
+14. 
+15. 
 
 ### Coding Style
 1. Variables should use camel case i.e. thisIsCamelCase
@@ -30,4 +32,5 @@
 4. \ --> escape sequence
 5. + --> string concatenation
 6. @ --> verbatim string literal
-7. $ {} --> String internpolation expression is indicated by {}, prefixed by $. 
+7. $ {} --> String internpolation expression is indicated by {}, prefixed by $.
+8. 
