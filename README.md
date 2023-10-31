@@ -2,6 +2,7 @@
 ## https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/write-your-first-code-using-c-sharp/write-your-first-c-sharp-code
 
 ### Things To Remember
+### Chapter 1 (7/7)
 1. Console.Write() --> Console is the class name, write is the method. The "." in between is a member access operator  
 2. Methods have () after it. () is called the method invocation operator  
 3. Double Quotes " " inclose a string called a "Literal String", use single quotes for characters
@@ -15,17 +16,20 @@
 11. String interpolation --> string message = $" {var1} {var2} ..."; --> more precise
 12. Both string concatenation and addition use the plus + symbol. This is called overloading an operator, and the compiler infers the proper use based on the data types it's operating on.
 13. Casting is a type of data conversion used with variables such as (float) var1 / (float) var2 which would normally be 12f/5 or 12f/5f or 12/5f, we use cast cz we don't have numbers
-14. 
-15. 
+
+### Chapter 2
 
 ### Coding Style
+### Chapter 1
 1. Variables should use camel case i.e. thisIsCamelCase
 2. Starting with underscore (_VariableName) is for a special purpose
 3. Combine strings in the Console.Write() instead of making a new variable
-4. 
+
+### Chapter 2
 
 
 ### List of Commands / Methods
+### Chapter 1
 1. Console.WriteLine()--> Prints a new line after output
 2. Console.Write()--> Prints output
 3. var--> sets datatype itself (var myName = "Abdul Moeez", var auto sets myName to be of type STRING), keeps things dynamic when we don't know what to use, the compiler selects the type  
@@ -33,4 +37,6 @@
 5. + --> string concatenation
 6. @ --> verbatim string literal
 7. $ {} --> String internpolation expression is indicated by {}, prefixed by $.
-8. 
+
+### Chapter 2
+9. 
