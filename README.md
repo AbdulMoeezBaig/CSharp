@@ -39,7 +39,8 @@
 1. red squiggly line appears --> compilation error
 2. 'parameter' refers to the variable that's being used inside the method. An 'argument' is the value that's passed when the method is called.
 3.  To examine the second overloaded version of the method, press ALT + Down Arrow on the keyboard.
-4.  
+4.  Code block is enclosed by {} i.e. brackets
+5.  
 
 
 
@@ -59,6 +60,10 @@
 1. Random dice = new Random(); --> reserves memory enough to store object based on 'random' class, creates object and stores its memory address, returns the memory address to variable dice i.e. connects them together
 2. Random.Next()  --> Stateful --> Generates next random number  
 3. Console.Clear() --> Clears screen
-
+4. Math.Max() --> returns max value
+5. message.Contains() --> checks the string "message" to contain another string ()
+6. || = OR OPERATOR
+7. && = AND OPERATOR
+8. 
 
 ---
