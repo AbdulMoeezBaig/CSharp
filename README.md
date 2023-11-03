@@ -1,8 +1,8 @@
 # CSharp (Free Code Camp)
 ## https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/write-your-first-code-using-c-sharp/write-your-first-c-sharp-code
 
-### Things To Remember
-### Chapter 1 (7/7)
+## Things To Remember
+## Chapter 1 (7/7)
 1. Console.Write() --> Console is the class name, write is the method. The "." in between is a member access operator  
 2. Methods have () after it. () is called the method invocation operator  
 3. Double Quotes " " inclose a string called a "Literal String", use single quotes for characters
@@ -17,15 +17,16 @@
 12. Both string concatenation and addition use the plus + symbol. This is called overloading an operator, and the compiler infers the proper use based on the data types it's operating on.
 13. Casting is a type of data conversion used with variables such as (float) var1 / (float) var2 which would normally be 12f/5 or 12f/5f or 12/5f, we use cast cz we don't have numbers
 
-### Chapter 2
+## Chapter 2
 1. Stateless vs Stateful (Console.Write is stateless, some methods are stateful and must have access to state of application (rely on values stored in memory by previous lines of codes)
 2. A single class can support both stateful and stateless methods. However, when you need to call stateful methods, you must first create an instance of the class so that the method can access state.
 3. Instance of a class = object
 
 
 
+---
 
-### Coding Style
+## Coding Style
 ### Chapter 1
 1. Variables should use camel case i.e. thisIsCamelCase
 2. Starting with underscore (_VariableName) is for a special purpose
@@ -33,10 +34,12 @@
 
 ### Chapter 2
 1. red squiggly line appears --> compilation error
+2. 'parameter' refers to the variable that's being used inside the method. An 'argument' is the value that's passed when the method is called.
 
 
 
 
+---
 
 ### List of Commands / Methods
 ### Chapter 1
@@ -50,5 +53,8 @@
 
 ### Chapter 2
 1. Random dice = new Random(); --> reserves memory enough to store object based on 'random' class, creates object and stores its memory address, returns the memory address to variable dice i.e. connects them together
-2. Random.Next()  --> Stateful
-3. 
+2. Random.Next()  --> Stateful --> Generates next random number  
+3. Console.Clear() --> Clears screen
+
+
+---
