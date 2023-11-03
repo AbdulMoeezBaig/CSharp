@@ -21,6 +21,9 @@
 1. Stateless vs Stateful (Console.Write is stateless, some methods are stateful and must have access to state of application (rely on values stored in memory by previous lines of codes)
 2. A single class can support both stateful and stateless methods. However, when you need to call stateful methods, you must first create an instance of the class so that the method can access state.
 3. Instance of a class = object
+4. Overloaded methods --> Methods that can take multiple types of input parameters
+5. Use docs.microsoft.com for information about overloaded methods
+6. 
 
 
 
@@ -35,7 +38,8 @@
 ### Chapter 2
 1. red squiggly line appears --> compilation error
 2. 'parameter' refers to the variable that's being used inside the method. An 'argument' is the value that's passed when the method is called.
-
+3.  To examine the second overloaded version of the method, press ALT + Down Arrow on the keyboard.
+4.  
 
 
 
