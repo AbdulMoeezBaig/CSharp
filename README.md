@@ -47,7 +47,7 @@
 2. Console.Write()--> Prints output
 3. var--> sets datatype itself (var myName = "Abdul Moeez", var auto sets myName to be of type STRING), keeps things dynamic when we don't know what to use, the compiler selects the type  
 4. \ --> escape sequence
-5. *+* --> string concatenation
+5. "+" --> string concatenation
 6. @ --> verbatim string literal
 7. $ {} --> String internpolation expression is indicated by {}, prefixed by $.
 
