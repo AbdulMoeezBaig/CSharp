@@ -18,6 +18,12 @@
 13. Casting is a type of data conversion used with variables such as (float) var1 / (float) var2 which would normally be 12f/5 or 12f/5f or 12/5f, we use cast cz we don't have numbers
 
 ### Chapter 2
+1. Stateless vs Stateful (Console.Write is stateless, some methods are stateful and must have access to state of application (rely on values stored in memory by previous lines of codes)
+2. A single class can support both stateful and stateless methods. However, when you need to call stateful methods, you must first create an instance of the class so that the method can access state.
+3. Instance of a class = object
+
+
+
 
 ### Coding Style
 ### Chapter 1
@@ -26,6 +32,10 @@
 3. Combine strings in the Console.Write() instead of making a new variable
 
 ### Chapter 2
+1. red squiggly line appears --> compilation error
+
+
+
 
 
 ### List of Commands / Methods
@@ -39,4 +49,6 @@
 7. $ {} --> String internpolation expression is indicated by {}, prefixed by $.
 
 ### Chapter 2
-9. 
+1. Random dice = new Random(); --> reserves memory enough to store object based on 'random' class, creates object and stores its memory address, returns the memory address to variable dice i.e. connects them together
+2. Random.Next()  --> Stateful
+3. 
