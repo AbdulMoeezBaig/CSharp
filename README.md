@@ -40,7 +40,8 @@
 2. 'parameter' refers to the variable that's being used inside the method. An 'argument' is the value that's passed when the method is called.
 3.  To examine the second overloaded version of the method, press ALT + Down Arrow on the keyboard.
 4.  Code block is enclosed by {} i.e. brackets
-5.  
+5.  The { and } symbols create code blocks. Many C# constructs require code blocks. These symbols should be placed on a separate line so that their boundaries are clearly visible and readable.
+6.  
 
 
 
