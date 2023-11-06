@@ -64,6 +64,11 @@
 5. message.Contains() --> checks the string "message" to contain another string ()
 6. || = OR OPERATOR
 7. && = AND OPERATOR
-8. Array.Length --> returns length of array  
+8. Array.Length --> returns length of array
+9. foreach (string name in names) --> Loop
+10. if (name.StartsWith("B")) --> .StartsWith usage
+11. "/* --> /* " adds comment block
+
+
 
 ---
