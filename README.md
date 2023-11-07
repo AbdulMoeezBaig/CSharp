@@ -49,6 +49,7 @@
 
 ### List of Commands / Methods
 ### Chapter 1 Write Your First Code Using C#
+¬. dotnet new console -o ./CsharpProjects/TestProject  
 1. Console.WriteLine()--> Prints a new line after output
 2. Console.Write()--> Prints output
 3. var--> sets datatype itself (var myName = "Abdul Moeez", var auto sets myName to be of type STRING), keeps things dynamic when we don't know what to use, the compiler selects the type  
@@ -69,7 +70,10 @@
 9. foreach (string name in names) --> Loop
 10. if (name.StartsWith("B")) --> .StartsWith usage
 11. "/* --> */" adds comment block
-
+12. string.ToUpper(), string.ToLower() --> string methods
+13. string.Trim() --> Remove blank spaces... value.Trim().ToLower() == value2.Trim().ToLower()  
+14.  string.Contains("search word")
+15.    
 
 
 ---
