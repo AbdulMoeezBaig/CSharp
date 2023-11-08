@@ -23,7 +23,9 @@
 3. Instance of a class = object
 4. Overloaded methods --> Methods that can take multiple types of input parameters
 5. Use docs.microsoft.com for information about overloaded methods
-6. 
+
+### Chapter 3 Add Logic to C# Console Applications
+
 
 
 
@@ -41,7 +43,9 @@
 3.  To examine the second overloaded version of the method, press ALT + Down Arrow on the keyboard.
 4.  Code block is enclosed by {} i.e. brackets
 5.  The { and } symbols create code blocks. Many C# constructs require code blocks. These symbols should be placed on a separate line so that their boundaries are clearly visible and readable.
-6.  
+
+### Chapter 3 Add Logic to C# Console Applications
+
 
 
 
@@ -73,7 +77,13 @@
 12. string.ToUpper(), string.ToLower() --> string methods
 13. string.Trim() --> Remove blank spaces... value.Trim().ToLower() == value2.Trim().ToLower()  
 14.  string.Contains("search word")
-15.    
+
+### Chapter 3 Add Logic to C# Console Applications
+1. switch() ... { case "string": { ... break;} case ... ... } default: (if no case matches) and case1:case2 for 2 cases corresponding to 1 flow
+2. 
+3. 
+4. 
+
 
 
 ---
