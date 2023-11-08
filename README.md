@@ -80,7 +80,7 @@
 
 ### Chapter 3 Add Logic to C# Console Applications
 1. switch() ... { case "string": { ... break;} case ... ... } default: (if no case matches) and case1:case2 for 2 cases corresponding to 1 flow
-2. 
+2. string[] product = sku.Split('-');  (string sku = "01-MN-L";)  
 3. 
 4. 
 
