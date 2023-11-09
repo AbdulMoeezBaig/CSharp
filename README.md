@@ -81,8 +81,11 @@
 ### Chapter 3 Add Logic to C# Console Applications
 1. switch() ... { case "string": { ... break;} case ... ... } default: (if no case matches) and case1:case2 for 2 cases corresponding to 1 flow
 2. string[] product = sku.Split('-');  (string sku = "01-MN-L";)  
-3. 
-4. 
+3. break --> breaks the entire loop, continue --> skips the iteration only
+4. ?string --> nullable type string designation (used for Console.WriteLine type)
+5. [,] --> 2D array declaration e.g. string[,] ourAnimals = new string[maxPets, 6];
+6. 
+7. 
 
 
 
