@@ -119,8 +119,15 @@
 17. Array.Sort(Array_name); --> sorts and saves the main array
 18. Array.Reverse(Array_name); --> reverses and saves the main array
 19. Array.Clear(Array,Index,Length) --> clears an array element
-20. 
-21. 
+20. Array.Resize(ref oldArrayName, newSize); --> resize array
+21. char[] charVar = value.ToCharArray(); --> string to char conversion
+22. string result = String.Join(",", valueArray); --> to separate characters via , in a char array
+23. string[] items = result.Split(',');
+24. 
+
+
+
+25. 
 
 
 
