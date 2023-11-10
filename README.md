@@ -67,6 +67,28 @@
 2. casting truncates, converting rounds up
 3. You can't cast a string into a decimal
 4. Array.Clear() will remove an array element's reference to a value if one exists. To fix this, you might check for null before attempt to print the value.
+5. Composite formatting uses numbered placeholders within a string. At run time, everything inside the braces is resolved to a value that is also passed in based on their position.
+6. String interpolation --> variables, composite formatting --> numbers like {0} replacing strings, can put multiple {0} ...  
+7. Notice how adding the :C to the tokens inside of the curly braces formats the number as currency regardless of whether you use int or decimal.
+8. The N numeric format specifier makes numbers more readable. Update your code as follows:
+9. :N by default = 2 digits after decimal, :N4 = 4 digits after decimal
+10. :P2 for percentages with 2 decimal
+11. String Methods: PadLeft(), PadRight(), Trim(), TrimStart(), TrimEnd(), GetHashCode(), Length, Contains(), StartsWith(), EndsWith(), Substring(), Remove(). IndexOf()  
+12. input.PadLeft(12, '-') --> overload method
+13. message = String.Format("{0:P}", currentReturn).PadRight(10);  
+14. message.IndexOf(')'); (finding the paranthesis in this case) (returns -1 if cannot find a match)  
+15. const string var1 --> value can never be changed  
+16. IndexOfAny() --> first location of string + searches from an array (of symbols) , LastIndexOf() --> last location of string 
+17. IndexOfAny(symbols array) + with overload IndexOfAny(symbols, start position)
+18. Remove(), Replace()
+19. string.Trim() --> removes leading white spaces
+20. 
+21. 
+
+
+
+
+
 
 
 
@@ -123,11 +145,11 @@
 21. char[] charVar = value.ToCharArray(); --> string to char conversion
 22. string result = String.Join(",", valueArray); --> to separate characters via , in a char array
 23. string[] items = result.Split(',');
-24. 
-
-
-
-25. 
+24. *NOTE* Array.Sort / Join etc will only work if string has been converted to a system array using string.split(" ").. something
+25. string result = string.Format("{0} {1}!", first, second); composite formatting
+26. Add :c at end of number to make it like currency
+27. 
+28. 
 
 
 
