@@ -32,6 +32,17 @@
 5.  A reference type variable stores its values in a separate memory region called the heap. The heap is a memory area that is shared across many applications running on the operating system at the same time. The .NET Runtime communicates with the operating system to determine what memory addresses are available, and requests an address where it can store the value. The .NET Runtime stores the value, and then returns the memory address to the variable. When your code uses the variable, the .NET Runtime seamlessly looks up the address stored in the variable, and retrieves the value that's stored there.
 6.  Value types can hold smaller values and are stored in the stack. Reference types can hold large values, and a new instance of a reference type is created using the new operator. Reference type variables hold a reference (the memory address) to the actual value stored in the heap.
 7.  Reference types include arrays, strings, and classes.
+8.  From the C# compiler's perspective, the safer operation would be to convert int into a string and perform concatenation instead.
+9.  To perform data conversion, you can use one of several techniques:
+  Use a helper method on the data type  
+  Use a helper method on the variable    
+  Use the Convert class' methods
+10. The term widening conversion means that you're attempting to convert a value from a data type that could hold less information to a data type that can hold more information.
+11. decimal myDecimal = myInt; (implicit conversion -- widening)
+12. int myInt = (int)myDecimal; (explicit conversion -- casting) () is the casting operator, in this case, narrowing conversion
+13. 
+14. 
+
 
 
 
@@ -53,7 +64,9 @@
 
 ### Chapter 3 Add Logic to C# Console Applications
 1. Keep scope of variables as narrow as possible
-2. 
+2. casting truncates, converting rounds up
+3. You can't cast a string into a decimal
+4. Array.Clear() will remove an array element's reference to a value if one exists. To fix this, you might check for null before attempt to print the value.
 
 
 
@@ -96,7 +109,19 @@
 6. 2. dotnet run... dotnet build  
 7. DataType.MinValue, DataType.MaxValue --> Console.WriteLine($"float  : {float.MinValue} to {float.MaxValue} (with ~6-9 digits of precision)");
 8. int[] data = new int[3]; --> array declaration
-9. 
+9. var.To.String() --> int to string
+10. int.Parse(var) --> string to int
+11. Convert.ToInt32(value1) --> string to int (rounds up the usual way)  (casting truncates, converting rounds up)  
+12. TryParse() when possible instead of using Convert
+14. using System.Globalization; (to use US culture settings for solving . and , problems)  
+15. CultureInfo.CurrentCulture = new CultureInfo("en-US");. (to use US culture settings for solving . and , problems)
+16. if (int.TryParse(value, out result)) --> returns true if converted with conversion in var result + The out keyword instructs the compiler that the TryParse() method won't return a value the traditional way only (as a return value), but also will communicate an output through this two-way parameter.
+17. Array.Sort(Array_name); --> sorts and saves the main array
+18. Array.Reverse(Array_name); --> reverses and saves the main array
+19. Array.Clear(Array,Index,Length) --> clears an array element
+20. 
+21. 
+
 
 
 
