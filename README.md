@@ -25,6 +25,13 @@
 5. Use docs.microsoft.com for information about overloaded methods
 
 ### Chapter 3 Add Logic to C# Console Applications
+1. instantiating the array without initializing any values, you use the new operator (the new operator is used to create a new instance of a type).
+2. signed and unsigned, signed means + and - both
+3.  Reference types include arrays, classes, and strings. Reference types are treated differently from value types regarding the way values are stored when the application is executing.
+4.  A value type variable stores its values directly in an area of storage called the stack. The stack is memory allocated to the code that is currently running on the CPU (also known as the stack frame, or activation frame). When the stack frame has finished executing, the values in the stack are removed.
+5.  A reference type variable stores its values in a separate memory region called the heap. The heap is a memory area that is shared across many applications running on the operating system at the same time. The .NET Runtime communicates with the operating system to determine what memory addresses are available, and requests an address where it can store the value. The .NET Runtime stores the value, and then returns the memory address to the variable. When your code uses the variable, the .NET Runtime seamlessly looks up the address stored in the variable, and retrieves the value that's stored there.
+6.  Value types can hold smaller values and are stored in the stack. Reference types can hold large values, and a new instance of a reference type is created using the new operator. Reference type variables hold a reference (the memory address) to the actual value stored in the heap.
+7.  Reference types include arrays, strings, and classes.
 
 
 
@@ -45,6 +52,8 @@
 5.  The { and } symbols create code blocks. Many C# constructs require code blocks. These symbols should be placed on a separate line so that their boundaries are clearly visible and readable.
 
 ### Chapter 3 Add Logic to C# Console Applications
+1. Keep scope of variables as narrow as possible
+2. 
 
 
 
@@ -84,8 +93,11 @@
 3. break --> breaks the entire loop, continue --> skips the iteration only
 4. ?string --> nullable type string designation (used for Console.WriteLine type)
 5. [,] --> 2D array declaration e.g. string[,] ourAnimals = new string[maxPets, 6];
-6. 
-7. 
+6. 2. dotnet run... dotnet build  
+7. DataType.MinValue, DataType.MaxValue --> Console.WriteLine($"float  : {float.MinValue} to {float.MaxValue} (with ~6-9 digits of precision)");
+8. int[] data = new int[3]; --> array declaration
+9. 
+
 
 
 
