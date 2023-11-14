@@ -90,7 +90,31 @@ Other external resources: Exceptions can occur when code communicates with other
 29. Although they are sometimes used interchangeably, a class and an object are different things. A class defines a type of object, but it's not an object itself. An object is a concrete entity based on a class.
 30. When an exception occurs, the .NET runtime searches for the nearest catch clause that can handle the exception. The process begins with the method that caused the exception to be thrown. First, the method is examined to see whether the code that caused the exception is inside a try code block. If the code is inside try code block, the catch clauses associated with the try statement are considered in order. If the catch clauses are unable to handle the exception, the method that called the current method is searched. This method is examined to determine whether the method call (to the first method) is inside a try code block. If the call is inside a try code block, the associated catch clauses are considered. This search process continues until a catch clause is found that can handle the current exception.
 31. Once a catch clause is found that can handle the exception, the runtime prepares to transfer control to the first statement of the catch block. However, before execution of the catch block begins, the runtime executes any finally blocks associated with try statements found during the search. If more than one finally block is found, they are executed in order, starting with the one closest to the code that caused the exception to be thrown. If no catch clause is found to handle the exception, the runtime terminates the application and displays an error message to the user.
-32. 
+32. Here are the properties of the Exception class:  
+Data: The Data property holds arbitrary data in key-value pairs.  
+HelpLink: The HelpLink property can be used to hold a URL (or URN) to a help file that provides extensive information about the cause of an exception.  
+HResult: The HResult property can be used to access to a coded numerical value that's assigned to a specific exception.  
+InnerException: The InnerException property can be used to create and preserve a series of exceptions during exception handling.  
+Message: The Message property provides details about the cause of an exception.  
+Source: The Source property can be used to access the name of the application or the object that causes the error.  
+StackTrace: The StackTrace property contains a stack trace that can be used to determine where an error occurred.  
+TargetSite: The TargetSite property can be used to get the method that throws the current exception.
+33.  System.Exception is the base class that all derived exception types inherit from.
+34.  Exception objects that describe an error are created and then thrown with the throw keyword. When an exception is thrown by your code, the runtime searches for the nearest catch clause that can handle the exception.
+35.  The Message property of an exception is readonly. Therefore, a custom Message property must be set when instantiating the object.
+36.  The Message property should explain the reason for the exception. However, information that's sensitive, or that represents a security concern shouldn't be put in the message text.
+37.  The StackTrace property is often used to track the origin of the exception. This string property contains the name of the methods on the current call stack, together with the file name and line number in each method that's associated with the exception.
+38.   A StackTrace object is created automatically by the common language runtime (CLR) from the point of the throw statement. Exceptions must be thrown from the point where the stack trace should begin.
+39.   The following list identifies practices to avoid when throwing exceptions:
+40.   Don't use exceptions to change the flow of a program as part of ordinary execution. Use exceptions to report and handle error conditions.
+41.   Exceptions shouldn't be returned as a return value or parameter instead of being thrown.
+42.   Don't throw System.Exception, System.SystemException, System.NullReferenceException, or System.IndexOutOfRangeException intentionally from your own source code.
+43.   Don't create exceptions that can be thrown in debug mode but not release mode. To identify runtime errors during the development phase, use Debug.Assert instead.
+44.   The Debug.Assert method is a tool for catching logic errors during development. By default, the Debug.Assert method works only in debug builds. You can use Debug.Assert in debug sessions to check for a condition that should never occur. The method takes two parameters: a Boolean condition to check, and an optional string message to display if the condition is false. Debug.Assert should not be used in place of throwing an exception, which is a way to handle exceptional situations during normal execution of your code. You should use Debug.Assert to catch errors that should never occur, and use exceptions to handle errors that could occur during normal execution of your program.
+45.   
+
+
+
 
 ---
 
@@ -234,8 +258,20 @@ The .NET runtime throws exceptions when basic operations fail. Here's a short li
 5. A 'hit count' breakpoint can be used to specify the number of times that a breakpoint must be encountered before it will 'break' execution. You can specify a hit count value when creating a new breakpoint (with the Add Conditional Breakpoint action) or when modifying an existing one (with the Edit Condition action). In both cases, an inline text box with a dropdown menu opens where you can enter the hit count value.
 6. A 'Logpoint' is a variant of a breakpoint that does not "break" into the debugger but instead logs a message to the console. Logpoints are especially useful for injecting logging while debugging production environments that cannot be paused or stopped. A Logpoint is represented by a "diamond" shaped icon rather than a filled circle. Log messages are plain text but can include expressions to be evaluated within curly braces ('{}').
 7. When inside a method, the Step Out button completes the remaining lines of the current method and then returns to the execution context that invoked the method.
-8. 
-9. 
+8. catch (Exception ex) {Console.WriteLine($"Exception "{ex.Message}"); --> ex = exception object
+9. StackTrace --> property reports the method and line number where the error occurred, along with the sequence of method calls (and line numbers) that led to the error
+10. catch (DivideByZeroException ex) -->  {ex.Message}
+11. catch (FormatException) ,     catch (OverflowException),     catch(Exception ex)  
+12. catch (OverflowException ex), catch (NullReferenceException ex), catch (IndexOutOfRangeException ex), catch (DivideByZeroException ex)
+13. ArgumentException or ArgumentNullException: Use these exception types when a method or constructor is called with an invalid argument value or null reference.
+14.  InvalidOperationException: Use this exception type when the operating conditions of a method don't support the successful completion of a particular method call.
+15.  NotSupportedException: Use this exception type when an operation or feature is not supported.
+16.  IOException: Use this exception type when an input/output operation fails.
+17.  FormatException: Use this exception type when the format of a string or data is incorrect.
+18.  ArgumentException invalidArgumentException = new ArgumentException(); --> creating an instance of exception
+19.  throw new FormatException("FormatException: Calculations in process XYZ have been cancelled due to invalid data format.");
+20.  
+21. 
 
 
 
