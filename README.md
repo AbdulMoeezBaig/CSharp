@@ -44,8 +44,53 @@
 14. 
 
 
+### Chapter 5  Create Methods in C# Console Applications
+1. Normally, string is reference typed, so once its changed at address, all instances of it should be changed HOWEVER string is special, when u change a string, a new string is created and therefore, outside the scope the original string appears (which would not happen for a normal reference type).. the string inside the method scope is lost  therefore use string as global and don't pass it via method  
+2. Explanation: method signature by e.g. void SetHealth(string health) wont get updated above... the keyword "string" must be removed here, they can't be altered once assigned and can only be written by a new value
+3. 
+4. 
 
 
+### Chapter 6  Debug C# Console Applications
+1.  Functional testing - Unit testing - Integration testing - System testing - Acceptance testing
+2.  Nonfunctional testing - Security testing - Performance testing - Usability testing - Compatibility testing
+3.  errors that occur during the application runtime are referred to as exceptions.. these exceptions should be managed in code
+4.  Exception handling is the process of managing errors that occur during runtime, and developers are responsible for handling exceptions by using "try" and "catch" statements in their code.
+5.  Code debugging is a process that developers use to isolate an issue and identify one or more ways to fix it
+6.  Software devs and tests both respondible for testing
+7.  if exception isn't managed, application closes with error
+8.  In C#, errors in the program at runtime are propagated through the program by using a mechanism called exceptions. Exceptions are thrown by code that encounters an error and caught by code that can correct the error. Exceptions can be thrown by the .NET runtime or by code in a program. Exceptions are represented by classes derived from Exception. Each class identifies the type of exception and contains properties that have details about the exception.
+9.  The terms "throw" and "catch" can be explained by evaluating the definition of an exception.
+The second sentence of the definition says "Exceptions are thrown by code that encounters an error and caught by code that can correct the error". The first part of this sentence tells you that exceptions are created by the .NET runtime when an error occurs in your code. The second part of the sentence tells you that you can write code to catch an exception that's been thrown. In addition, the code that catches the exception can be used to complete a corrective action, hopefully mitigating the situation caused by the code that resulted in the error. In other words, you can write code that protects your application when an error occurs.
+11. The type of exception determines the information it contains
+12. An exception is created and thrown by the .NET runtime.
+13. exceptions can be accessed and used to take corrective action at runtime
+14. A debugger is a software tool used to observe and control the execution flow of your program with an analytical approach. Debuggers help you isolate the cause of a bug and help you resolve it. A debugger connects to your code using one of two approaches: By hosting your program in its own execution process..By running as a separate process that's attached to your running program.
+
+15. Run and Debug controls panel. Used to configure and start a debug session.
+16. VARIABLES section. Used to view and manage variable state during a debug session.
+17. WATCH section. Used to monitor variables or expressions. For example, you could configure an expression using one or more variables and watch it to see when a particular condition is met.
+18. CALL STACK section. Used to keep track of the current point of execution within the running application, starting with the initial point of entry into the application. The call stack shows which method is currently being executed, as well as the method or methods in the execution path that led to the current point of execution (current line of code).
+19. BREAKPOINTS section. Displays the current breakpoint settings.
+20. Debug toolbar. Used to control code execution during the debug process. This toolbar is only displayed while the application is running.
+21. Current execution step. Used to identify the current execution step by highlighting it in the Editor. In this case, the current execution step is a breakpoint (breakpoints are marked with a red dot to the left of the line number).
+22. DEBUG CONSOLE. Used to display messages from the debugger. The DEBUG CONSOLE panel is the default console for console applications and is able to display output from Console.WriteLine() and related Console output methods.
+23. two simple scenarios when updating the launch configuration file is required: Your C# console application reads input from the console. Your project workspace includes more than one application.
+24. Common scenarios that require exception handling include:  
+User input: Exceptions can occur when code processes user input. For example, exceptions occur when the input value is in the wrong format or out of range.  
+Data processing and computations: Exceptions can occur when code performs data calculations or conversions. For example, exceptions occur when code attempts to divide by zero, cast to an unsupported type, or assign a value that's out of range.  
+File input/output operations: Exceptions can occur when code reads from or writes to a file. For example, exceptions occur when the file doesn't exist, the program doesn't have permission to access the file, or the file is in use by another process.  
+Database operations: Exceptions can occur when code interacts with a database. For example, exceptions occur when the database connection is lost, a syntax error occurs in a SQL statement, or a constraint violation occurs.  
+Network communication: Exceptions can occur when code communicates over a network. For example, exceptions occur when the network connection is lost, a timeout occurs, or the remote server returns an error.  
+Other external resources: Exceptions can occur when code communicates with other external resources. Web Services, REST APIs, or third-party libraries, can throw exceptions for various reasons. For example, exceptions occur due to network connections issues, malformed data, etc.
+25. The try code block contains the guarded code that may cause an exception. If the code within a try block causes an exception, the exception is handled by a corresponding catch block.
+26. The catch code block contains the code that's executed when an exception is caught. The catch block can handle the exception, log it, or ignore it. A catch block can be configured to execute when any exception type occurs, or only when a specific type of exception occurs.
+27. The finally code block contains code that executes whether an exception occurs or not. The finally block is often used to clean up any resources that are allocated in a try block. For example, ensuring that a variable has the correct or required value assigned to it.
+28. A runtime instance of a class is generally referred to as an object, so exceptions are often referred to as exception objects.
+29. Although they are sometimes used interchangeably, a class and an object are different things. A class defines a type of object, but it's not an object itself. An object is a concrete entity based on a class.
+30. When an exception occurs, the .NET runtime searches for the nearest catch clause that can handle the exception. The process begins with the method that caused the exception to be thrown. First, the method is examined to see whether the code that caused the exception is inside a try code block. If the code is inside try code block, the catch clauses associated with the try statement are considered in order. If the catch clauses are unable to handle the exception, the method that called the current method is searched. This method is examined to determine whether the method call (to the first method) is inside a try code block. If the call is inside a try code block, the associated catch clauses are considered. This search process continues until a catch clause is found that can handle the current exception.
+31. Once a catch clause is found that can handle the exception, the runtime prepares to transfer control to the first statement of the catch block. However, before execution of the catch block begins, the runtime executes any finally blocks associated with try statements found during the search. If more than one finally block is found, they are executed in order, starting with the one closest to the code that caused the exception to be thrown. If no catch clause is found to handle the exception, the runtime terminates the application and displays an error message to the user.
+32. 
 
 ---
 
@@ -86,6 +131,27 @@
 21. 
 
 
+### Chapter 5  Create Methods in C# Console Applications
+1. Notice that it isn't necessary to have the method defined before you call it. This flexibility allows you to organize your code as you see fit. It's common to define all methods at the end of a program.
+2. Method signature = something u write method code in
+3. Value types such as int, bool, float, double, and char directly contain values. Reference types such as string, array, and objects (such as instances of Random) don't store their values directly. Instead, reference types store an address where their value is being stored.
+4. It is important to remember that string is a reference type, but it is immutable. That means once it has been assigned a value, it can't be altered. In C#, when methods and operators are used to modify a string, the result that is returned is actually a new string object.
+5. Passing to function with name of attribute: RSVP(name: "Linh", allergies: "none", partySize: 2, inviteOnly: false); --> void RSVP(string name, int partySize, string allergies, bool inviteOnly)
+6. A parameter becomes optional when it's assigned a default value. If an optional parameter is omitted from the arguments, the default value is used when the method executes
+7.  Example of optional parameters: Default value: void RSVP(string name, int partySize = 1, string allergies = "none", bool inviteOnly = true)
+8.  Optional parameters must appear after all required parameters
+9.  
+
+### Chapter 6  Debug C# Console Applications
+The .NET runtime throws exceptions when basic operations fail. Here's a short list of runtime exceptions and their error conditions:
+
+1. ArrayTypeMismatchException: Thrown when an array can't store a given element because the actual type of the element is incompatible with the actual type of the array.
+2. DivideByZeroException: Thrown when an attempt is made to divide an integral value by zero.
+3. FormatException: Thrown when the format of an argument is invalid.
+4. IndexOutOfRangeException: Thrown when an attempt is made to index an array when the index is less than zero or outside the bounds of the array.
+5. InvalidCastException: Thrown when an explicit conversion from a base type to an interface or to a derived type fails at runtime.
+6. NullReferenceException: Thrown when an attempt is made to reference an object whose value is null.
+7. OverflowException: Thrown when an arithmetic operation in a checked context overflows.
 
 
 
@@ -151,6 +217,25 @@
 27. 
 28. 
 
+### Chapter 5  Create Methods in C# Console Applications
+1.  string[] address = ipv4Input.Split(".", StringSplitOptions.RemoveEmptyEntries);
+2.  Clear(array) --> makes all values 0 in array *Array is reference type so changing values at address will change values inside and outside "brackets defined scope"
+3.  if(originalStr.Equals(searchStr)) --> compares original string with search string
+4.  string[,] AssignGroup(int groups)  --> return 2D array
+5.  Thread.Sleep(1000) --> Delay
+6.  
+7.  
+
+### Chapter 6  Debug C# Console Applications
+1. make a new project folder
+2. open folder in terminal and write cli command: dotnet new console
+3. project files are created, now can do, dotnet run
+4. view --> command pallete --> type: .net: g  --> new folder .vscode is created (used to configure debug environment)
+5. A 'hit count' breakpoint can be used to specify the number of times that a breakpoint must be encountered before it will 'break' execution. You can specify a hit count value when creating a new breakpoint (with the Add Conditional Breakpoint action) or when modifying an existing one (with the Edit Condition action). In both cases, an inline text box with a dropdown menu opens where you can enter the hit count value.
+6. A 'Logpoint' is a variant of a breakpoint that does not "break" into the debugger but instead logs a message to the console. Logpoints are especially useful for injecting logging while debugging production environments that cannot be paused or stopped. A Logpoint is represented by a "diamond" shaped icon rather than a filled circle. Log messages are plain text but can include expressions to be evaluated within curly braces ('{}').
+7. When inside a method, the Step Out button completes the remaining lines of the current method and then returns to the execution context that invoked the method.
+8. 
+9. 
 
 
 
